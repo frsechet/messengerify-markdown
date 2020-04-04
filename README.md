@@ -1,7 +1,7 @@
 # Messengerify-Markdown
 
 [![Build Status](https://travis-ci.org/frsechet/messengerify-markdown.svg?branch=master)](https://travis-ci.org/frsechet/messengerify-markdown)
-[![codecov](https://codecov.io/gh/frsechet/messengerify-markdown/branch/master/graph/badge.svg)](https://codecov.io/gh/frsechet/messengerify-markdown) [![Greenkeeper badge](https://badges.greenkeeper.io/frsechet/messengerify-markdown.svg)](https://greenkeeper.io/)
+[![codecov](https://codecov.io/gh/frsechet/messengerify-markdown/branch/master/graph/badge.svg)](https://codecov.io/gh/frsechet/messengerify-markdown)
 
 Messengerify-Markdown is a Markdown to [Messenger-specific-markdown](https://www.facebook.com/help/147348452522644) converter, based on [Unified](https://github.com/unifiedjs/unified) and [Remark](https://github.com/remarkjs/remark/).
 
