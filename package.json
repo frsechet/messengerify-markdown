@@ -1,7 +1,7 @@
 {
-  "name": "slackify-markdown",
-  "version": "2.1.0",
-  "description": "Convert markdown into Slack-specific markdown",
+  "name": "messengerify-markdown",
+  "version": "1.0.0",
+  "description": "Convert markdown into Messenger-specific markdown",
   "license": "MIT",
   "main": "index.js",
   "types": "index.d.ts",
@@ -12,24 +12,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jsarafajr/slackify-markdown.git"
+    "url": "git://github.com/messenger/messengerify-markdown.git"
   },
   "keywords": [
     "slack",
     "markdown",
-    "slackify",
+    "messengerify",
     "parser",
     "remark",
     "unified"
   ],
   "author": {
-    "name": "Yevhenii Baraniuk",
-    "web": "https://github.com/jsarafajr"
+    "name": "François Falala-Sechet",
+    "web": "https://github.com/frsechet"
   },
   "bugs": {
-    "url": "https://github.com/jsarafajr/slackify-markdown/issues"
+    "url": "https://github.com/frsechet/messengerify-markdown/issues"
   },
-  "homepage": "https://github.com/jsarafajr/slackify-markdown#readme",
+  "homepage": "https://github.com/frsechet/messengerify-markdown#readme",
   "jest": {
     "testURL": "http://localhost/"
   },

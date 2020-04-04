@@ -1,8 +1,6 @@
 const { Compiler } = require('remark-stringify');
-const { wrap, isURL } = require('./utils');
+const { wrap } = require('./utils');
 
-// fixes slack in-word formatting (e.g. hel*l*o)
-const zeroWidthSpace = String.fromCharCode(0x200B);
 
 const visitors = {
   heading(node) {
@@ -11,15 +9,15 @@ const visitors = {
   },
 
   strong(node) {
-    return wrap(this.content(node), zeroWidthSpace, '*');
+    return wrap(this.content(node), '*');
   },
 
   delete(node) {
-    return wrap(this.content(node), zeroWidthSpace, '~');
+    return wrap(this.content(node), '~');
   },
 
   emphasis(node) {
-    return wrap(this.content(node), zeroWidthSpace, '_');
+    return wrap(this.content(node), '_');
   },
 
   list(node) {
@@ -50,24 +48,19 @@ const visitors = {
   },
 
   url(node, text) {
-    const url = this.encode(node.url || '', node);
-    if (!isURL(url)) return url;
-    return text ? `<${url}|${text}>` : `<${url}>`;
+    return this.encode(node.url || '', node);
   },
 };
 
-class SlackCompiler extends Compiler {
+class MessengerCompiler extends Compiler {
   constructor(...args) {
     super(...args);
     this.visitors = Object.assign(this.visitors, visitors);
-    this.escape = this.slackEscape.bind(this);
+    this.escape = this.messengerEscape.bind(this);
   }
 
-  slackEscape(value, node, parent) {
-    return value
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
+  messengerEscape(value, node, parent) {
+    return value;
   }
 
   content(node) {
@@ -75,6 +68,6 @@ class SlackCompiler extends Compiler {
   }
 }
 
-module.exports = function slackify() {
-  this.Compiler = SlackCompiler;
+module.exports = function messengerify() {
+  this.Compiler = MessengerCompiler;
 };

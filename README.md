@@ -1,20 +1,22 @@
-# Slackify-Markdown
+# Messengerify-Markdown
 
-[![Build Status](https://travis-ci.org/jsarafajr/slackify-markdown.svg?branch=master)](https://travis-ci.org/jsarafajr/slackify-markdown)
-[![codecov](https://codecov.io/gh/jsarafajr/slackify-markdown/branch/master/graph/badge.svg)](https://codecov.io/gh/jsarafajr/slackify-markdown) [![Greenkeeper badge](https://badges.greenkeeper.io/jsarafajr/slackify-markdown.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/frsechet/messengerify-markdown.svg?branch=master)](https://travis-ci.org/frsechet/messengerify-markdown)
+[![codecov](https://codecov.io/gh/frsechet/messengerify-markdown/branch/master/graph/badge.svg)](https://codecov.io/gh/frsechet/messengerify-markdown) [![Greenkeeper badge](https://badges.greenkeeper.io/frsechet/messengerify-markdown.svg)](https://greenkeeper.io/)
 
-Slackify-Markdown is a Markdown to [Slack-specific-markdown](https://api.slack.com/docs/message-formatting#message_formatting) converter, based on [Unified](https://github.com/unifiedjs/unified) and [Remark](https://github.com/remarkjs/remark/).
+Messengerify-Markdown is a Markdown to [Messenger-specific-markdown](https://www.facebook.com/help/147348452522644) converter, based on [Unified](https://github.com/unifiedjs/unified) and [Remark](https://github.com/remarkjs/remark/).
+
+Forked from [jsarafajr](https://github.com/jsarafajr)'s [Slackify-Markdown](https://github.com/jsarafajr/slackify-markdown)
 
 ## Install
 
 ```bash
-npm install slackify-markdown
+npm install messengerify-markdown
 ```
 
 ## Usage
 
 ```js
-const slackifyMarkdown = require('slackify-markdown');
+const messengerifyMarkdown = require('messengerify-markdown');
 const markdown = `
 # List of items
 
@@ -25,7 +27,7 @@ const markdown = `
 [here is an example](https://example.com)
 `;
 
-slackifyMarkdown(markdown);
+messengerifyMarkdown(markdown);
 /*
  *List of items*
 
@@ -33,12 +35,12 @@ slackifyMarkdown(markdown);
  • item 2
  • item 3
 
- <https://example.com|here is an example>
+ https://example.com
 /*
 ```
 
 ### Copyright and License
 
-Copyright Yevhenii Baraniuk, 2019
+Copyright François Falala-Sechet, 2020
 
 [MIT Licence](LICENSE)

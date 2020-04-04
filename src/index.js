@@ -1,6 +1,6 @@
 const unified = require('unified');
 const parse = require('remark-parse');
-const slackify = require('./slackify');
+const messengerify = require('./messengerify');
 
 const defaultOptions = {
   pedantic: true,
@@ -14,7 +14,8 @@ module.exports = (markdown, options) => {
 
   return unified()
     .use(parse, options)
-    .use(slackify)
+    .use(messengerify)
     .processSync(markdown)
-    .toString();
+    .toString()
+    .trim();
 };

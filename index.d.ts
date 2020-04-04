@@ -1,4 +1,4 @@
-declare module "slackify-markdown" {
-  function slackify(markdown: string): string;
-  export default slackify;
+declare module "messengerify-markdown" {
+  function messengerify(markdown: string): string;
+  export default messengerify;
 }
